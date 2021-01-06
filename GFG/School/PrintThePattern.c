@@ -1,0 +1,25 @@
+/*
+  *Link of the problem: https://practice.geeksforgeeks.org/problems/print-the-pattern-set-1/1
+  *Problem Statement
+    You a given a number N. You need to print the pattern for the given value of N.
+    for N = 2 the pattern will be 
+    2 2 1 1
+    2 1
+    for N = 3 the pattern will be 
+    3 3 3 2 2 2 1 1 1
+    3 3 2 2 1 1
+    3 2 1
+*/
+
+int i,j,k,m=n;
+	for(i=0;i<n;i++){
+		k=i;
+		for(j=1;j<=((n-i)*n);j++){
+			printf("%d ",n-k+i);
+			if(j%m==0) {
+				k++;
+			}
+		}
+		m--;
+		printf("$");
+	}
